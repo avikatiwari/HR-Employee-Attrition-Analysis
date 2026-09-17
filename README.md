@@ -1,159 +1,101 @@
-HR Employee Attrition Analysis
+<div align="center">
 
-A data analytics project exploring employee attrition using Python,
-SQL, Excel, and Power BI.
+📊 HR Employee Attrition Analysis
 
-📌 Project Overview
+Exploring employee attrition through Python, SQL & Data Visualization
 
-Employee attrition is an important HR analytics problem because
-understanding who leaves, where attrition is concentrated, and which
-employee characteristics are associated with attrition can help
-organizations investigate workforce patterns and make better-informed HR
-decisions.
+Data Cleaning • EDA • Visualization • SQL Analysis
 
-This project analyzes the IBM HR Employee Attrition dataset,
-downloaded from Kaggle, using a multi-tool analytics workflow:
+<br>
 
-Python → data cleaning, exploratory data analysis (EDA), and
-statistical exploration
 
-SQL (MySQL) → structured business-question analysis
 
-Excel → dataset storage and working copy
 
-Power BI → planned interactive dashboards and visualizations
 
-The project is being developed progressively, with additional SQL
-questions and dashboard analysis to be added as the analysis expands.
 
-🎯 Project Objectives
 
-The main objectives of this project are to:
+</div>
 
-Clean and prepare the HR dataset for analysis.
+📌 About
 
-Explore employee and workforce characteristics.
+This project analyzes the IBM HR Employee Attrition dataset to explore patterns related to employee attrition.
 
-Analyze patterns associated with employee attrition.
+The analysis follows a practical data analytics workflow:
 
-Answer practical HR-related questions using SQL.
+Kaggle → Excel → Python → SQL → Visualizations
 
-Compare employee groups using attrition rates.
+The project combines Python-based data analysis with SQL business questions to understand the dataset from different perspectives.
 
-Identify roles and employee segments with higher numbers of
-attrition cases.
+🎯 Objectives
 
-Build interactive visualizations and dashboards in Power BI.
+Clean and prepare the HR dataset
 
-Present the analysis in a clear, portfolio-ready format.
+Perform exploratory data analysis using Python
 
-🗂️ Dataset
+Explore employee characteristics associated with attrition
 
-Dataset: IBM HR Employee Attrition dataset
-Source: Kaggle
+Answer practical HR questions using SQL
 
-The dataset contains employee-level information covering demographic,
-job, compensation, satisfaction, involvement, travel, and
-attrition-related attributes.
+Create meaningful visualizations from the analysis
 
-Important fields used in the analysis
+Present the findings in a clear and understandable format
 
-Some of the fields used across the Python and SQL analysis include:
+🔄 Project Workflow
 
-Age
+                    📦 Kaggle Dataset
+                           │
+                           ▼
+                       📗 Excel
+                           │
+                           ▼
+                  🐍 Python + Pandas
+                           │
+                  ┌────────┴────────┐
+                  ▼                 ▼
+             🧹 Data Cleaning     🔍 EDA
+                                    │
+                                    ▼
+                              📊 Visualization
 
-Gender
+                           🗄️ MySQL / SQL
+                                    │
+                                    ▼
+                           Business Questions
 
-Department
+🐍 Python Analysis
 
-JobRole
+Python is being used for the data cleaning, exploratory analysis, and visualization stages.
 
-MonthlyIncome
+🧹 Data Cleaning
 
-PercentSalaryHike
+The dataset was inspected and prepared using Pandas.
 
-Attrition
+The cleaning process included:
 
-DistanceFromHome
+Checking dataset shape and columns
 
-BusinessTravel
-
-JobSatisfaction
-
-JobInvolvement
-
-JobLevel
-
-OverTime
-
-MaritalStatus
-
-Education
-
-EducationField
-
-EnvironmentSatisfaction
-
-WorkLifeBalance
-
-YearsAtCompany
-
-TotalWorkingYears
-
-YearsInCurrentRole
-
-YearsSinceLastPromotion
-
-YearsWithCurrManager
-
-NumCompaniesWorked
-
-TrainingTimesLastYear
-
-🧹 Data Cleaning --- Python
-
-The initial data-cleaning stage was completed using Python and
-Pandas.
-
-The workflow included:
-
-Loading the Excel dataset with Pandas
-
-Inspecting the dataset shape and columns
-
-Checking for missing/null values
+Checking missing/null values
 
 Checking duplicate records
 
-Reviewing data types and dataset information
+Reviewing data types
 
 Generating descriptive statistics
 
-Removing columns that were not required for the analysis
+Removing unnecessary columns
 
-Columns removed during cleaning
-
-The following columns were removed because they did not contribute
-meaningful analytical information for this project:
+Removed Columns
 
 EmployeeCount
-
 Over18
-
 StandardHours
-
 EmployeeNumber
 
-The cleaned dataset was then used for exploratory analysis.
+🔍 Exploratory Data Analysis
 
-📊 Exploratory Data Analysis --- Python
+The dataset was explored across different employee attributes.
 
-Python was used to explore how different employee characteristics relate
-to attrition.
-
-Categorical analysis
-
-Attrition was explored across variables such as:
+Categorical Analysis
 
 Gender
 
@@ -171,20 +113,15 @@ Job Level
 
 Overtime
 
-Education
+Job Satisfaction
 
 Environment Satisfaction
-
-Job Satisfaction
 
 Work-Life Balance
 
 Stock Option Level
 
-Numerical analysis
-
-Numerical variables were also compared across employees who stayed and
-employees who left, including:
+Numerical Analysis
 
 Age
 
@@ -214,126 +151,15 @@ Number of Companies Worked
 
 Percent Salary Hike
 
-The Python analysis is available in:
+📁 Python file: HR_Attrition_Data_Analysis.py
 
-HR_Attrition_Data_Analysis.py
+📊 Data Visualization
 
-🗄️ SQL Analysis --- MySQL
+The visualization stage will be created using Python based on the cleaned dataset and EDA findings.
 
-After the Python cleaning and EDA stage, the original Kaggle/Excel
-dataset was imported into MySQL for structured querying.
+Planned visualizations include:
 
-The SQL analysis currently contains 9 business questions (Q1--Q9).
-
-Questions currently completed
-
-Q1 --- Monthly Income
-
-Which employees have a MonthlyIncome below 5,000?
-
-Q2 --- Salary Hike
-
-Which employees have a PercentSalaryHike greater than 10%?
-
-Q3 --- Female Attrition
-
-How many female employees have left the company?
-
-Q4 --- Male Attrition
-
-How many male employees have left the company?
-
-Q5 --- Distance From Home
-
-Among female employees who left the company, which employee(s) have the
-greatest DistanceFromHome?
-
-Q6 --- Job Role With Highest Attrition
-
-Which JobRole has the highest number of employees who left the
-company?
-
-Q7 --- Business Travel
-
-Among employees in the JobRole with the highest attrition, how does
-BusinessTravel relate to employee attrition?
-
-Q8 --- Satisfaction & Involvement
-
-Is the attrition rate higher among employees with JobSatisfaction and
-JobInvolvement below 3 compared with other employees?
-
-For this analysis, a CASE expression was used to create two employee
-groups:
-
-Low Satisfaction & Low Involvement
-Other Employees
-
-Attrition was converted into a binary indicator:
-
-Yes → 1
-No  → 0
-
-The AVG() of this indicator was then used to calculate the attrition
-rate.
-
-Q9 --- Older Employees in the Highest-Attrition Role
-
-Among employees who left the company, which employees are above 35 years
-old and belong to the JobRole with the highest attrition?
-
-🧠 SQL Concepts Practiced
-
-This project has been used to practice practical SQL concepts including:
-
-SELECT
-
-WHERE
-
-COUNT()
-
-MAX()
-
-AVG()
-
-CASE
-
-GROUP BY
-
-ORDER BY
-
-LIMIT
-
-Subqueries
-
-Aggregate functions
-
-Conditional aggregation
-
-Calculating rates from binary indicators
-
-The SQL file is:
-
-01_HR_Attrition_Analysis.sql
-
-Additional SQL questions will be added as the project progresses.
-
-📈 Power BI --- Dashboard & Visualization
-
-The next major stage of the project is Power BI.
-
-The dashboard phase will transform the analysis into interactive
-visualizations that make the major HR patterns easier to explore.
-
-Planned dashboard areas
-
-Potential dashboard components include:
-
-Overall employee count
-
-Overall attrition count
-
-Overall attrition rate
+Attrition distribution
 
 Attrition by gender
 
@@ -341,174 +167,210 @@ Attrition by department
 
 Attrition by job role
 
-Attrition by business travel
-
 Attrition by overtime
+
+Attrition by business travel
 
 Attrition by job satisfaction
 
 Attrition by job involvement
 
-Attrition by age group
+Age vs. attrition
 
-Attrition by monthly income
+Monthly income vs. attrition
 
-Attrition by distance from home
+Distance from home vs. attrition
 
-Attrition by years at company
+Years at company vs. attrition
 
-Attrition by job level
+Visualization Preview
 
-Interactive filters/slicers
+🚧 Coming soon — Python visualizations will be added here.
 
-The exact dashboard design will be finalized after the remaining SQL
-analysis and visualization requirements are completed.
+Once completed, selected charts and key findings will be displayed in this section.
 
-🔄 Project Workflow
+🗄️ SQL Analysis
 
-The overall workflow for this project is:
+The dataset was also analyzed using MySQL through a set of practical business questions.
 
-Kaggle Dataset
-      ↓
-Excel
-      ↓
-Python / Pandas
-      ↓
-Data Cleaning
-      ↓
-Exploratory Data Analysis
-      ↓
-MySQL
-      ↓
-Business Questions & SQL Analysis
-      ↓
-Power BI
-      ↓
-Interactive Dashboards & Visualizations
-      ↓
-Insights & Final Presentation
+Completed Questions
 
-Python and SQL are being used as complementary parts of the analysis
-rather than as replacements for each other.
+#
+
+Question / Analysis
+
+Q1
+
+Employees with Monthly Income below 5,000
+
+Q2
+
+Employees with Percent Salary Hike above 10%
+
+Q3
+
+Number of female employees who left
+
+Q4
+
+Number of male employees who left
+
+Q5
+
+Greatest Distance From Home among female employees who left
+
+Q6
+
+Job Role with the highest attrition
+
+Q7
+
+Business Travel and attrition within the highest-attrition Job Role
+
+Q8
+
+Attrition rate for employees with low Job Satisfaction and Job Involvement
+
+Q9
+
+Employees above 35 in the highest-attrition Job Role who left
+
+SQL Concepts Practiced
+
+SELECT
+WHERE
+COUNT()
+MAX()
+AVG()
+CASE
+GROUP BY
+ORDER BY
+LIMIT
+Subqueries
+Conditional Aggregation
+
+📁 SQL file: 01_HR_Attrition_Analysis.sql
+
+Additional SQL questions will be added as the project develops.
+
+📈 Key Areas of Analysis
+
+The project focuses on understanding attrition across:
+
+👤 Demographics
+   Age • Gender • Education
+
+💼 Job Characteristics
+   Department • Job Role • Job Level
+
+💰 Compensation
+   Monthly Income • Salary Hike
+
+😊 Employee Experience
+   Job Satisfaction • Job Involvement
+   Environment Satisfaction • Work-Life Balance
+
+⏱️ Work Conditions
+   Overtime • Business Travel
+
+📍 Distance & Experience
+   Distance From Home • Years at Company
 
 📁 Repository Structure
 
 HR-Employee-Attrition-Analysis/
 │
-├── data/
+├── 📂 data/
 │   └── IBM_HR_Attrition_Project.xlsx
 │
-├── 01_HR_Attrition_Analysis.sql
+├── 🗄️ 01_HR_Attrition_Analysis.sql
 │
-├── HR_Attrition_Data_Analysis.py
+├── 🐍 HR_Attrition_Data_Analysis.py
 │
-└── README.md
+└── 📖 README.md
 
-File descriptions
+🛠️ Tools Used
 
-File                                   Purpose
+Tool
 
-data/IBM_HR_Attrition_Project.xlsx   Working dataset
+Purpose
 
-01_HR_Attrition_Analysis.sql         MySQL analysis and business
-questions
+🐍 Python
 
-HR_Attrition_Data_Analysis.py        Python data cleaning and EDA
+Cleaning, EDA & visualization
 
-README.md                            Project documentation
+🐼 Pandas
 
-🛠️ Tools & Technologies
+Data manipulation & analysis
 
-Tool           Purpose
+📊 Matplotlib
 
-Python     Data cleaning and exploratory analysis
-Pandas     Data manipulation and analysis
-MySQL      SQL-based business analysis
-Excel      Dataset storage and preparation
-Power BI   Interactive dashboards and visualization
-GitHub     Version control and project portfolio
+Data visualization
 
-🚧 Current Project Status
+🗄️ MySQL
 
-Completed
+SQL-based analysis
 
-Dataset downloaded from Kaggle
+📗 Excel
 
-Dataset stored in Excel
+Dataset storage
 
-Data cleaning completed in Python
+🐙 GitHub
 
-Data quality checks performed
+Project documentation & version control
 
-Exploratory data analysis completed in Python
+🚦 Project Status
 
-SQL database/table prepared
+Stage
 
-SQL questions Q1--Q9 completed
+Status
 
-SQL file added to GitHub
+Dataset Collection
 
-Python analysis added to GitHub
+✅ Complete
 
-Dataset added to GitHub
+Excel Dataset
 
-In Progress / Next Steps
+✅ Complete
 
-Add remaining SQL business questions
+Python Data Cleaning
 
-Finalize SQL analysis
+✅ Complete
 
-Build Power BI dashboard
+Python EDA
 
-Add interactive visualizations
+✅ Complete
 
-Identify and document key findings
+SQL Q1–Q9
 
-Add dashboard screenshots to the README
+✅ Complete
 
-Finalize project presentation
+Additional SQL Questions
 
-🔍 Key Analytical Direction
+🔄 In Progress
 
-Rather than treating the project as only a data-cleaning exercise, the
-analysis is being developed as a complete data analytics workflow:
+Python Visualizations
 
-Clean → Explore → Query → Visualize → Interpret
+⏳ Next
 
-The goal is to understand employee attrition from multiple perspectives
-and then communicate the findings through an interactive dashboard.
+Final Insights
 
-📌 Future Improvements
+⏳ Next
 
-As the project develops, additional analysis may include:
+🚀 What's Next?
 
-More SQL business questions
+The next stage is to create the Python visualizations and use them to communicate the major patterns found during the analysis.
 
-Deeper employee segmentation
+Additional SQL questions will also be added as the analysis expands.
 
-Additional attrition-rate comparisons
+<div align="center">
 
-Power BI calculated measures
+👩‍💻 Avika
 
-Interactive slicers and drill-downs
+Data Analytics Project
 
-Dashboard-level KPIs
+Python • SQL • Data Visualization
 
-Data-driven HR insights
+⭐ Built as a practical data analytics portfolio project.
 
-Final recommendations based on the observed patterns
-
-👩‍💻 Project Author
-
-Avika
-
-This project is part of a practical learning portfolio focused on
-developing skills in:
-
-Python → SQL → Power BI → Data Analytics
-
-⭐ Project Status
-
-Currently under development --- Python cleaning & EDA and SQL analysis
-(Q1--Q9) completed; Power BI dashboard and additional SQL analysis are
-the next stages.
+</div>
