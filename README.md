@@ -307,6 +307,10 @@ Data manipulation & analysis
 
 Data visualization
 
+Power BI
+
+![HR Attrition Dashboard](dashboard/HR_Attrition_Dashboard.png)
+
 🗄️ MySQL
 
 SQL-based analysis
